@@ -1,0 +1,46 @@
+{
+	"name": "virtual-court",
+	"version": "1.1.2-4",
+	"description": "A platform for hosting virtual court sessions and organizing legal meetings",
+	"main": "app.js",
+	"dependencies": {
+		"bcrypt": "^5.1.1",
+		"body-parser": "^1.20.2",
+		"express": "^4.19.2",
+		"nedb": "^1.8.0",
+		"node": "^12.18.4",
+		"serve-favicon": "^2.5.0",
+		"socket.io": "^2.5.0"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.8",
+		"@types/nedb": "^1.8.11",
+		"@types/node": "^14.11.2",
+		"@types/serve-favicon": "^2.5.0",
+		"@types/socket.io": "^2.1.11",
+		"nodemon": "^2.0.4"
+	},
+	"scripts": {
+		"start": "node app.js",
+		"developmental-server": "nodemon app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/saurabh-G07/virtual-court.git"
+	},
+
+
+	"keywords": [
+		"Video Conference",
+		"Multi User",
+		"WEBRCTC",
+		"virtual-court",
+		"Nodejs",
+		"Express",
+		"Socket.io",
+		"nedb",
+		"serve-favicon"
+	],
+	"author": "Saurabh Ghundre <saurabhghundre@gmail.com>",
+	"license": "UNLICENSED"
+}

@@ -1,0 +1,23 @@
+{
+	"name": "Meet Up",
+	"short_name": "Meet Up",
+	"start_url": "/",
+	"description": "Meeting With Your Friends And Organising Meetings Simplified",
+	"display": "minimal-ui",
+	"background_color": "#17A2B8",
+	"theme_color": "#17A2B8",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "./favicon.ico",
+			"type": "image/x-icon",
+			"sizes": "198x198",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "./appleTouchIcon.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	]
+}

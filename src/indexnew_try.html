@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Up | Join A Meeting</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionic/1.3.2/css/ionic.min.css"
+        integrity="sha512-i1YfKKj5ZBPWvPKyxhmPLvAFFHnf57luvGLb/TSgta3Qgc5qzLo+jYzZAeMZk7pg82SPKn4q00vgVyCvZs+Psw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="theme-color" content="#17A2B8">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="apple-touch-icon" href="./appleTouchIcon.png">
+    <style>
+        .blur-background {
+            background-image: url('images/01.jpg'); /* specify your background image */
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: blur(5px); /* add blur effect */
+            z-index: -1; /* push it to the background */
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- <nav>
+        <div class="navbar">
+            <i class='bx bx-menu'></i>
+            <div class="logo"><a href="#">CodingLab</a></div>
+            <div class="nav-links">
+                <div class="sidebar-logo">
+                    <span class="logo-name">CodingLab</span>
+                    <i class='bx bx-x'></i>
+                </div>
+                <ul class="links">
+                    <li><a href="#">HOME</a></li>
+                    <li>
+                        <a href="#">HTML & CSS</a>
+                        <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Login Forms</a></li>
+                            <li><a href="#">Card Design</a></li>
+                            <li class="more">
+                                <span><a href="#">More</a>
+                                    <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                                </span>
+                                <ul class="more-sub-menu sub-menu">
+                                    <li><a href="#">Neumorphism</a></li>
+                                    <li><a href="#">Pre-loader</a></li>
+                                    <li><a href="#">Glassmorphism</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">JAVASCRIPT</a>
+                        <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                        <ul class="js-sub-menu sub-menu">
+                            <li><a href="#">Dynamic Clock</a></li>
+                            <li><a href="#">Form Validation</a></li>
+                            <li><a href="#">Card Slider</a></li>
+                            <li><a href="#">Complete Website</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="search-box">
+                <i class='bx bx-search'></i>
+                <div class="input-box">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+    </nav> -->
+    <div class="blur-background"></div>
+    <script src="script.js"></script>
+    <div class="navbar ">
+        <div style="color: white;" class="title"><a href="/"
+                style="color: #fff;text-decoration: none;">&#27;</a>&nbsp;&nbsp;
+            <b>Meet Up - Join Meeting</b>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+
+    <style>
+        .rounded-10 {
+            border-radius: 10px;
+        }
+    </style>
+    
+    <form>
+        <div class="col-12 col-md-6 offset-md-3 mb-4">
+            <label for="username" style="font-size: 30px; font-weight: bold; color: #4262ce;">Your Name</label>
+            <input type="text" id='username' class="form-control rounded-10" required placeholder="Enter your name">
+        </div>
+    
+        <div class="col-12 col-md-6 offset-md-3 mb-4">
+            <label for="link" style="font-size: 30px; font-weight: bold; color: #4262ce;">Meeting ID</label>
+            <input type="text" id='link' class="form-control rounded-10" required placeholder="Enter meeting ID">
+        </div>
+    
+        <div class="col-12 col-md-6 offset-md-3 mb-4 text-center">
+            <button type="button" id="enter-room" class="btn btn-primary btn-lg" onClick="enterRoom()">Join Meeting</button>
+        </div>
+    
+        <div class="row">
+            <div class="col-12 text-center">
+                <span class="form-text small text-danger" id='err-msg-username'></span>
+            </div>
+        </div>
+    </form>
+    
+    
+    <script>
+        function enterRoom() {
+            let name = document.querySelector('#username').value;
+            let room = document.querySelector('#link').value;
+            if (name && room) { //remove error message, if any
+                document.querySelector('#err-msg-username').innerHTML = "";
+
+                //save the user's name in sessionStorage
+                sessionStorage.setItem('username', name);
+
+                //reload room
+                // window.open(document.getElementById('link').value);
+                window.open(`${location.origin}/indexold.html?room=${room}`, "_self")
+            } else {
+                document.querySelector('#err-msg-username').innerHTML = "All Field Are Necessary";
+            }
+        }
+
+    </script>
+    <script>
+        window.console && (setTimeout(function () {
+            return console.log("%c%s", "color: red; background: yellow; font-size: 24px;", "WARNING!")
+        }),
+            setTimeout(function () {
+                return console.log("%c%s", "font-size: 18px;", "Using this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.\nDo not enter or paste code that you don't understand.")
+            }))
+    </script>
+</body>
+
+</html>

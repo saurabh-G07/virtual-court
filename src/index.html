@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Meet Up | Start Or Join A Meeting</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionic/1.3.2/css/ionic.min.css"
+			integrity="sha512-i1YfKKj5ZBPWvPKyxhmPLvAFFHnf57luvGLb/TSgta3Qgc5qzLo+jYzZAeMZk7pg82SPKn4q00vgVyCvZs+Psw=="
+			crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<meta name="theme-color" content="#17A2B8">
+		<link rel="manifest" href="./manifest.webmanifest">
+		<link rel="apple-touch-icon" href="./appleTouchIcon.png">
+
+
+	</head>
+
+	<body>
+		<div class="navbar fixed-top bg-info rounded-0 d-print-none">
+			<div style="color:white;" class="title"> <b>Meet Up - Join Or Start A New Meeting</b> </div>
+		</div>
+		<center>
+			<video muted style="height: 50%;" autoplay="true" id="videoElement"></video>
+		</center>
+		<center>
+			<a href="./indexold.html" class="meeting-button">
+				<button class="button button-balanced">New Meeting</button>
+			</a>
+			<a href="./indexnew.html" class="meeting-button">
+				<button class="button button-royal">Join Meeting as Judge</button>
+			</a>
+			<a href="./indexnew.html" class="meeting-button">
+				<button class="button button-royal">Join Meeting as Client</button>
+			</a>
+			<a href="./meetings.html" class="meeting-button">
+				<button class="button button-calm">My Meetings</button>
+			</a>
+		</center>
+		<script>
+			var video = document.querySelector("#videoElement");
+
+			if (navigator.mediaDevices.getUserMedia) {
+				navigator.mediaDevices.getUserMedia({ video: true })
+					.then(function (stream) {
+						video.srcObject = stream;
+					})
+					.catch(function (err0r) {
+						console.log("Something went wrong!");
+					});
+			}
+			window.console && (setTimeout(function () {
+				return console.log("%c%s", "color: red; background: yellow; font-size: 24px;", "WARNING!")
+			}),
+				setTimeout(function () {
+					return console.log("%c%s", "font-size: 18px;", "Using this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.\nDo not enter or paste code that you don't understand.")
+				}))
+		</script>
+	</body>
+
+</html>
