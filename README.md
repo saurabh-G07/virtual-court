@@ -14,13 +14,14 @@
 ## Installation
 
 1. **Clone the Repository**:
+   ```bash
    git clone https://github.com/saurabh-G07/virtual-court.git
 
 
-2. **Navigate to the Project Directory**:
+3. **Navigate to the Project Directory**:
    cd virtual-court
 
-3. **Install Dependencies:**
+4. **Install Dependencies:**
    npm install
 
 **Run the Application:**
