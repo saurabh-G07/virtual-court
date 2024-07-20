@@ -16,8 +16,6 @@
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/saurabh-G07/virtual-court.git
-
-
 3. **Navigate to the Project Directory**:
    cd virtual-court
 
