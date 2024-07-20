@@ -16,22 +16,24 @@
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/saurabh-G07/virtual-court.git
-3. **Navigate to the Project Directory**:
+2. **Navigate to the Project Directory**:
+   ```bash
    cd virtual-court
-
-4. **Install Dependencies:**
+3. **Install Dependencies:**
+   ```bash
    npm install
-
-**Run the Application:**
+4. **Run the Application:**
+   ```bash
    npm start
 
-**For development, use:**
-   npm run developmental-server
+5. **For development, use:**
+   ```bash
+   npm run developmental-server 
 
 
-   Contact
+**Contact:**
+
 For inquiries or further information, you can reach me through the following channels:
-
-Author: Saurabh Mahadev Ghundre
-Email: saurabhghundre@example.com
-LinkedIn: https://www.linkedin.com/in/saurabh-ghundre/
+1. Author: Saurabh Mahadev Ghundre
+2. Email: saurabhghundre@gmail.com
+3. LinkedIn: https://www.linkedin.com/in/saurabh-ghundre/
